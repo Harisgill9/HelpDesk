@@ -25,26 +25,40 @@
     <!-- Quick Actions -->
     <div>
         <button onclick="window.location.href='submit-ticket.html'">Submit New Application</button>
-        <button onclick="window.location.href='my-tickets.html'">Track My Applications</button>
     </div>
 
     <!-- Recent Applications -->
+
     <div>
-        <h3>My Recent Applications</h3>
-        <table>
+        <h3>My Submitted Applications</h3>
+
+        <!-- Filter -->
+        <label for="filterStatus">Filter by Status:</label>
+        <select id="filterStatus">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
+        </select>
+    </div>
+
+    <!-- Applications Table -->
+    <div>
+        <table id="ticketsTable">
             <thead>
                 <tr>
+                    <th>#</th>
+                    <th>Application Type</th>
                     <th>Subject</th>
-                    <th>Type</th>
                     <th>Date</th>
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody id="recentTickets">
+            <tbody id="ticketsList">
             </tbody>
         </table>
     </div>
 
     <script src="dashboard.js"></script>
 </body>
-</html>
+</html> 

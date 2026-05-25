@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUB - Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div>
+        <h2>Islamia University of Bahawalpur</h2>
+        <h3>Admin Panel</h3>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Search and Filters -->
+    <div>
+        <input type="text" id="searchBox" autocomplete="off" placeholder="Search by Name or Roll No"/>
+
+        <label for="filterStatus">Filter by Status:</label>
+        <select id="filterStatus">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="inreview">In Review</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
+        </select>
+
+        <label for="filterType">Filter by Type:</label>
+        <select id="filterType">
+            <option value="all">All</option>
+            <option value="degree">Degree Issuance</option>
+            <option value="transcript">Transcript Request</option>
+            <option value="leave">Leave Approval</option>
+            <option value="fee">Fee Correction</option>
+            <option value="hostel">Hostel Request</option>
+            <option value="scholarship">Scholarship Request</option>
+            <option value="bonafide">Bonafide Certificate</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <!-- Applications Table -->
+    <div>
+        <table id="adminTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Student Name</th>
+                    <th>Roll No</th>
+                    <th>Application Type</th>
+                    <th>Subject</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="adminList">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
