@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IUB-Dashboard</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUB - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div>
         <h2>Islamia University of Bahawalpur</h2>
-        
-    </body>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Welcome -->
+    <div>
+        <h3 id="welcomeMsg">Welcome!</h3>
+        <p id="rollNo"></p>
+        <p id="department"></p>
+        <p id="semester"></p>
+    </div>
+
+    <!-- Quick Actions -->
+    <div>
+        <button onclick="window.location.href='submit-ticket.html'">Submit New Application</button>
+        <button onclick="window.location.href='my-tickets.html'">Track My Applications</button>
+    </div>
+
+    <!-- Recent Applications -->
+    <div>
+        <h3>My Recent Applications</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="recentTickets">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
 </html>
