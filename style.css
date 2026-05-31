@@ -221,3 +221,7 @@ video {
     color: #ccd9e8;
     font-size: 14px;
 }
+.video-container {
+    display: flex;
+    justify-content: center;
+}
