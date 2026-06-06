@@ -1,0 +1,35 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Ahmed Ali",
+            "rollNo": "F24BSCS1M0001",
+            "email": "F24BSCS1M0001@iub.edu.pk",
+            "password": "123456",
+            "department": "Computer Science",
+            "semester": 4,
+            "role": "student"
+        },
+        {
+            "id": 2,
+            "name": "Fatima Khan",
+            "rollNo": "F24BSCS1M0002",
+            "email": "F24BSCS1M0002@iub.edu.pk",
+            "password": "123456",
+            "department": "Computer Science",
+            "semester": 4,
+            "role": "student"
+        },
+        {
+            "id": 3,
+            "name": "Admin",
+            "rollNo": "ADMIN-001",
+            "email": "admin@iub.edu.pk",
+            "password": "admin123",
+            "department": "Administration",
+            "semester": null,
+            "role": "admin"
+        }
+    ],
+    "tickets": []
+}
