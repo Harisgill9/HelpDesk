@@ -46,7 +46,7 @@ body {
 }
 
 .section p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.8;
     color: #555;
 }
@@ -62,8 +62,8 @@ body {
 .card {
     background-color: #003366;
     border-radius: 10px;
-    width: 220px;
-    height: 120px;
+    width: 200px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,4 +123,96 @@ body {
 .footer p {
     color: #ccd9e8;
     font-size: 17px;
+}
+
+/* login form css */
+/* Login Box */
+.login-box {
+    width: 400px;
+    margin: 80px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 20px;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.login-box h3 {
+    font-size: 15px;
+    color: #777;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #003366;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border: 1px solid #003366;
+}
+
+#errorMsg {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.btn-login:hover {
+    background-color: #0055a5;
+}
+
+.btn-back {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #003366;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #f0f4f8;
 }
