@@ -321,40 +321,184 @@ body {
     border: 1px solid #003366;
 }
 
-/* Table */
-.table-container {
+
+/* submit application css */
+
+/* Form Container */
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.form-container h3 {
+    color: #003366;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border: 1px solid #003366;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+select:focus {
+    outline: none;
+    border: 1px solid #003366;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Format Container */
+.format-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.format-container h3 {
+    color: #003366;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 10px;
+}
+
+.format-box {
+    background-color: #f0f4f8;
+    border-left: 4px solid #003366;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.format-box h4 {
+    color: #003366;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.format-box p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+}
+/* Ticket Cards */
+.tickets-container {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
-.table-container h3 {
+.tickets-container h3 {
     color: #003366;
     margin-bottom: 15px;
     font-size: 18px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.ticket-card {
+    background: #f8f9ff;
+    border: 1px solid #dde3f0;
+    border-left: 4px solid #003366;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: 0.3s;
 }
 
-th {
-    background-color: #003366;
-    color: white;
-    padding: 12px;
-    text-align: left;
+.ticket-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.ticket-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ticket-type {
+    font-weight: bold;
+    font-size: 15px;
+    color: #003366;
+}
+
+.ticket-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.badge-pending {
+    background: #fff8e1;
+    color: #f9a825;
+    border: 1px solid #f9a825;
+}
+
+.badge-resolved {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+.badge-rejected {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #c62828;
+}
+
+.ticket-subject {
+    margin: 5px 0;
     font-size: 14px;
+    color: #444;
 }
 
-td {
-    padding: 12px;
-    font-size: 14px;
-    color: #555;
-    border-bottom: 1px solid #f0f0f0;
+.ticket-desc {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #666;
 }
 
-tr:hover {
-    background-color: #f0f4f8;
+.no-tickets {
+    color: #888;
+    text-align: center;
+    padding: 30px;
+    font-size: 15px;
+}
+
+.error-msg {
+    color: red;
+    text-align: center;
+    padding: 20px;
 }

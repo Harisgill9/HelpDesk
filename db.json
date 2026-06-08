@@ -1,35 +1,245 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Ahmed Ali",
-            "rollNo": "F24BSCS1M0001",
-            "email": "F24BSCS1M0001@iub.edu.pk",
-            "password": "123456",
-            "department": "Computer Science",
-            "semester": 4,
-            "role": "student"
-        },
-        {
-            "id": 2,
-            "name": "Fatima Khan",
-            "rollNo": "F24BSCS1M0002",
-            "email": "F24BSCS1M0002@iub.edu.pk",
-            "password": "123456",
-            "department": "Computer Science",
-            "semester": 4,
-            "role": "student"
-        },
-        {
-            "id": 3,
-            "name": "Admin",
-            "rollNo": "ADMIN-001",
-            "email": "admin@iub.edu.pk",
-            "password": "admin123",
-            "department": "Administration",
-            "semester": null,
-            "role": "admin"
-        }
-    ],
-    "tickets": []
+  "users": [
+    {
+      "id": "1",
+      "name": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "email": "F24BSCS1M0001@iub.edu.pk",
+      "password": "123456",
+      "department": "Computer Science",
+      "semester": 4,
+      "role": "student"
+    },
+    {
+      "id": "2",
+      "name": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "email": "F24BSCS1M0002@iub.edu.pk",
+      "password": "123456",
+      "department": "Computer Science",
+      "semester": 4,
+      "role": "student"
+    },
+    {
+      "id": "3",
+      "name": "Admin",
+      "rollNo": "ADMIN-001",
+      "email": "admin@iub.edu.pk",
+      "password": "admin123",
+      "department": "Administration",
+      "semester": null,
+      "role": "admin"
+    }
+  ],
+  "tickets": [
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "degree",
+      "subject": "jkkk",
+      "description": "kkjjjjjjjhhhhjhhhhhhhhhhhhhhhhhhhh",
+      "status": "pending",
+      "id": "8N0TRjmM5Ps"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "transcript",
+      "subject": "dfssf",
+      "description": "sfsfslfsfff",
+      "status": "pending",
+      "id": "LJtIneLjJJw"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "degree",
+      "subject": "sdjhdd",
+      "description": "sdkasdad",
+      "status": "pending",
+      "id": "62hqI3w55x0"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "degree",
+      "subject": "sdfsfsfssshf",
+      "description": "fsdfsfsfsf",
+      "status": "pending",
+      "id": "PzPLczUij5w"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "leave",
+      "subject": "dsssfjfdffkfkf",
+      "description": "sdfjfijfijwifjwej",
+      "status": "pending",
+      "id": "8vwprFaJL6s"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "degree",
+      "subject": "sdadasdjdasdsd",
+      "description": "asdasdasd",
+      "status": "pending",
+      "id": "TSv5Cdumt4w"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "leave",
+      "subject": "    ,,,",
+      "description": "mmkmkm",
+      "status": "pending",
+      "id": "oTTKlyzZ00s"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "degree",
+      "subject": "sdhhsjhasdjkljhlsd",
+      "description": "sjhdurhui",
+      "status": "pending",
+      "id": "AhlNkAidj7E"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "transcript",
+      "subject": "asjgddhjk",
+      "description": "hdfhhiw",
+      "status": "pending",
+      "id": "F68cw8eGyxs"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "transcript",
+      "subject": "nmb",
+      "description": "bnbvg",
+      "status": "pending",
+      "id": "M6hGlONil8E"
+    },
+    {
+      "userId": "2",
+      "studentName": "Farhan Khan",
+      "rollNo": "F24BSCS1M0002",
+      "department": "Computer Science",
+      "type": "fee",
+      "subject": "dsfsf",
+      "description": "sfsfsfsfs",
+      "status": "pending",
+      "id": "C0N2zkfMQio"
+    },
+    {
+      "userId": "1",
+      "studentName": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "department": "Computer Science",
+      "type": "degree",
+      "subject": "how",
+      "description": "wonder",
+      "status": "pending",
+      "id": "uPW9TbW6n9g"
+    },
+    {
+      "userId": "1",
+      "studentName": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "department": "Computer Science",
+      "type": "transcript",
+      "subject": "as",
+      "description": "ada",
+      "status": "pending",
+      "id": "OP9L_O1ygIY"
+    },
+    {
+      "userId": "1",
+      "studentName": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "department": "Computer Science",
+      "type": "scholarship",
+      "subject": "sdad",
+      "description": "asdasda",
+      "status": "pending",
+      "id": "0wJj-GIrMgo"
+    },
+    {
+      "userId": "1",
+      "studentName": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "department": "Computer Science",
+      "type": "hostel",
+      "subject": "how",
+      "description": "are",
+      "status": "pending",
+      "id": "L86gUpX3_JA"
+    },
+    {
+      "userId": "1",
+      "studentName": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "department": "Computer Science",
+      "type": "leave",
+      "subject": "fsf",
+      "description": "jji",
+      "status": "pending",
+      "id": "S244unaJYzM"
+    },
+    {
+      "userId": "1",
+      "studentName": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "department": "Computer Science",
+      "type": "leave",
+      "subject": "dflf",
+      "description": "nffsdkfkl",
+      "status": "pending",
+      "id": "dj0dogmBZvQ"
+    },
+    {
+      "userId": "1",
+      "studentName": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "department": "Computer Science",
+      "type": "degree",
+      "subject": "HOW ",
+      "description": "CAN",
+      "status": "pending",
+      "id": "kM6MFuL6ntk"
+    },
+    {
+      "userId": "1",
+      "studentName": "Ahmed Ali",
+      "rollNo": "F24BSCS1M0001",
+      "department": "Computer Science",
+      "type": "transcript",
+      "subject": "HOW",
+      "description": "ARE YOU",
+      "status": "pending",
+      "id": "PZVo1aE6pwY"
+    }
+  ]
 }
