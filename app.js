@@ -4,16 +4,16 @@ function loadLogin() {
         <div class="login-box">
             <h2>Islamia University of Bahawalpur</h2>
             <h3>Help Desk Login</h3>
-            <form id="loginForm">
-            <div class="form-group">
-                <label for="registrationNo">Registration No*</label>
-                <input type="text" id="registrationNo" name="registrationNo" autocomplete="off" 
-                placeholder="e.g. F24BSCS1M0001" required/>
-            </div>
-            <div class="form-group">
-                <label for="pwd">Password*</label>
-                <input type="password" id="pwd" name="pwd" autocomplete="off" required/>
-            </div>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="registrationNo">Registration No*</label>
+                    <input type="text" id="registrationNo" name="registrationNo" autocomplete="off" 
+                    placeholder="e.g. F24BDOCS1M0001"/>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password*</label>
+                    <input type="password" id="pwd" name="pwd" autocomplete="off"/>
+                </div>
                 <div id="errorMsg"></div>
                 <button type="submit" class="btn-login">Login</button>
                 <button type="button" class="btn-back" onclick="loadHome()">Back to Home</button>
@@ -31,8 +31,13 @@ function loadHome() {
 async function handleLogin(e) {
     e.preventDefault();
 
-    const registrationNo = document.getElementById('registrationNo').value;
-    const pwd = document.getElementById('pwd').value;
+    const registrationNo = document.getElementById('registrationNo').value.trim();
+    const pwd = document.getElementById('pwd').value.trim();
+
+    if (!registrationNo || !pwd) {
+        document.getElementById('errorMsg').innerHTML = 'Please fill all fields!';
+        return;
+    }
 
     document.getElementById('errorMsg').innerHTML = 'Please wait...';
 
@@ -60,8 +65,11 @@ async function handleLogin(e) {
 }
 
 function loadDashboard() {
-    document.getElementById('landingPage').style.display = 'none';
+    const landingPage = document.getElementById('landingPage');
+    if (landingPage) landingPage.style.display = 'none';
+
     const user = JSON.parse(localStorage.getItem('loggedUser'));
+    if (!user) { loadHome(); return; }
 
     document.getElementById('app').innerHTML = `
         <div class="dashboard">
@@ -112,7 +120,7 @@ function loadDashboard() {
 
 async function loadTickets(userId) {
     try {
-        const response = await fetch(`http://localhost:3000/tickets`);
+        const response = await fetch('http://localhost:3000/tickets');
 
         if (!response.ok) {
             document.getElementById('ticketsList').innerHTML = `<p class="error-msg">Server error!</p>`;
@@ -121,10 +129,9 @@ async function loadTickets(userId) {
 
         const tickets = await response.json();
 
-        // filter by userId manually
-        let filtered = tickets.filter(t => t.userId === userId);
+        // fix: compare as string to avoid type mismatch
+        let filtered = tickets.filter(t => String(t.userId) === String(userId));
 
-        // filter by type
         const filterType = document.getElementById('filterType').value;
         if (filterType !== 'all') {
             filtered = filtered.filter(t => t.type === filterType);
@@ -196,10 +203,10 @@ function loadSubmit() {
             <div class="form-container">
                 <h3>Submit New Application</h3>
 
-                <form id="submitForm">
+                <form id="submitForm" novalidate>
                     <div class="form-group">
                         <label for="appType">Application Type*</label>
-                        <select id="appType" name="appType" required>
+                        <select id="appType" name="appType">
                             <option value="">Select Type</option>
                             <option value="degree">Degree Issuance</option>
                             <option value="transcript">Transcript Request</option>
@@ -215,17 +222,16 @@ function loadSubmit() {
                     <div class="form-group">
                         <label for="subject">Subject*</label>
                         <input type="text" id="subject" name="subject" 
-                        autocomplete="off" placeholder="e.g. Request for Degree Certificate" required/>
+                        autocomplete="off" placeholder="e.g. Request for Degree Certificate"/>
                     </div>
 
                     <div class="form-group">
                         <label for="description">Description*</label>
                         <textarea id="description" name="description" 
-                        rows="6" placeholder="Write your application here" required></textarea>
+                        rows="6" placeholder="Write your application here"></textarea>
                     </div>
 
                     <div id="submitError" style="color:red; font-size:13px;"></div>
-                    <div id="submitSuccess" style="color:green; font-size:13px;"></div>
 
                     <div class="form-buttons">
                         <button type="submit" class="btn-submit">Submit Application</button>
@@ -322,27 +328,28 @@ function loadSubmit() {
         </div>
     `;
 
-    document.getElementById('submitForm').addEventListener('submit', handleSubmit);
+    document.getElementById('submitForm').onsubmit = handleSubmit;
 }
 
 async function handleSubmit(e) {
     e.preventDefault();
-
     const user = JSON.parse(localStorage.getItem('loggedUser'));
-
+    if (!user) {
+        return;
+    }
     const appType = document.getElementById('appType').value;
-    const subject = document.getElementById('subject').value;
-    const description = document.getElementById('description').value;
+    const subject = document.getElementById('subject').value.trim();
+    const description = document.getElementById('description').value.trim();
 
     if (!appType) {
         document.getElementById('submitError').innerHTML = 'Please select application type!';
         return;
     }
-    if (subject.trim() === '') {
+    if (subject === '') {
         document.getElementById('submitError').innerHTML = 'Please enter subject!';
         return;
     }
-    if (description.trim() === '') {
+    if (description === '') {
         document.getElementById('submitError').innerHTML = 'Please enter description!';
         return;
     }
@@ -372,9 +379,16 @@ async function handleSubmit(e) {
             return;
         }
 
-        document.getElementById('submitSuccess').innerHTML = 'Application submitted successfully!';
-
-        loadDashboard();
+        document.getElementById('app').innerHTML = `
+            <div class="success-page">
+                <div class="success-box">
+                    <h1>✅</h1>
+                    <h2>Application Submitted Successfully!</h2>
+                    <p>Your application has been submitted.<br>The concerned department will respond to your request soon.</p>
+                    <button class="btn-submit" onclick="loadDashboard()">View Dashboard</button>
+                </div>
+            </div>
+        `;
 
     } catch (error) {
         document.getElementById('submitError').innerHTML = 'Cannot connect to server!';
