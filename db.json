@@ -40,8 +40,9 @@
       "type": "fee",
       "subject": "sdsa",
       "description": "sdasd",
-      "status": "pending",
-      "id": "_9N7B8j0YNw"
+      "status": "rejected",
+      "id": "_9N7B8j0YNw",
+      "adminNote": "you have coppied work"
     },
     {
       "userId": "1",
