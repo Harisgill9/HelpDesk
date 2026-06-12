@@ -8,58 +8,84 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <div>
-        <h2>Islamia University of Bahawalpur</h2>
-        <h3>Admin Panel</h3>
-        <button onclick="logout()">Logout</button>
+    <div id="adminLoginSection">
+        <div class="login-box">
+            <h2>Islamia University of Bahawalpur</h2>
+            <h3>Admin Login</h3>
+            <form id="adminLoginForm" novalidate>
+                <div class="form-group">
+                    <label for="adminRollNo">Roll No*</label>
+                    <input type="text" id="adminRollNo" autocomplete="off" placeholder="e.g. ADMIN-001"/>
+                </div>
+                <div class="form-group">
+                    <label for="adminPwd">Password*</label>
+                    <input type="password" id="adminPwd" autocomplete="off"/>
+                </div>
+                <div id="adminErrorMsg"></div>
+                <button type="submit" class="btn-login">Login</button>
+                <a href="index.html" class="btn-back" style="display:block; text-align:center; margin-top:10px;">Back to Home</a>
+            </form>
+        </div>
     </div>
 
-    <!-- Search and Filters -->
-    <div>
-        <input type="text" id="searchBox" autocomplete="off" placeholder="Search by Name or Roll No"/>
+    <div id="adminPanel" style="display:none;">
 
-        <label for="filterStatus">Filter by Status:</label>
-        <select id="filterStatus">
-            <option value="all">All</option>
-            <option value="pending">Pending</option>
-            <option value="inreview">In Review</option>
-            <option value="approved">Approved</option>
-            <option value="rejected">Rejected</option>
-        </select>
+        <!-- Header -->
+        <div class="dash-header">
+            <h2>Islamia University of Bahawalpur — Admin Panel</h2>
+            <button class="btn-logout" onclick="adminLogout()">Logout</button>
+        </div>
 
-        <label for="filterType">Filter by Type:</label>
-        <select id="filterType">
-            <option value="all">All</option>
-            <option value="degree">Degree Issuance</option>
-            <option value="transcript">Transcript Request</option>
-            <option value="leave">Leave Approval</option>
-            <option value="fee">Fee Correction</option>
-            <option value="hostel">Hostel Request</option>
-            <option value="scholarship">Scholarship Request</option>
-            <option value="bonafide">Bonafide Certificate</option>
-            <option value="other">Other</option>
-        </select>
-    </div>
+        <!-- Statistics -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3 id="totalCount">0</h3>
+                <p>Total</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="pendingCount">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="resolvedCount">0</h3>
+                <p>Resolved</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="rejectedCount">0</h3>
+                <p>Rejected</p>
+            </div>
+        </div>
 
-    <!-- Applications Table -->
-    <div>
-        <table id="adminTable">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Student Name</th>
-                    <th>Roll No</th>
-                    <th>Application Type</th>
-                    <th>Subject</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="adminList">
-            </tbody>
-        </table>
+        <!-- Search and Filters -->
+        <div class="admin-filters">
+            <input type="text" id="searchBox" autocomplete="off" placeholder="🔍 Search by student name or roll no..."/>
+            <select id="adminFilterStatus">
+                <option value="all">All Status</option>
+                <option value="pending">Pending</option>
+                <option value="resolved">Resolved</option>
+                <option value="rejected">Rejected</option>
+            </select>
+            <select id="adminFilterType">
+                <option value="all">All Types</option>
+                <option value="degree">Degree Issuance</option>
+                <option value="transcript">Transcript Request</option>
+                <option value="leave">Leave Approval</option>
+                <option value="fee">Fee Correction</option>
+                <option value="hostel">Hostel Request</option>
+                <option value="scholarship">Scholarship Request</option>
+                <option value="bonafide">Bonafide Certificate</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Tickets -->
+        <div class="tickets-container">
+            <h3>All Student Applications</h3>
+            <div id="adminTicketsList">
+                <p>Loading...</p>
+            </div>
+        </div>
+
     </div>
 
     <script src="admin.js"></script>
