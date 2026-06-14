@@ -2,113 +2,58 @@
   "users": [
     {
       "id": "1",
-      "name": "Ahmed Ali",
-      "rollNo": "F24BDOCS1M0001",
-      "email": "F24BSCS1M0001@iub.edu.pk",
-      "password": "123456",
+      "name": "Muhammad Haris",
+      "rollNo": "F24BDOCS1M01259",
+      "email": "f24bdocs1m01259@iub.edu.pk",
+      "password": "haris@203",
       "department": "Computer Science",
       "semester": 4,
       "role": "student"
     },
     {
       "id": "2",
-      "name": "Farhan Khan",
-      "rollNo": "F24BDOCS1M0002",
-      "email": "F24BSCS1M0002@iub.edu.pk",
-      "password": "123456",
+      "name": "Muhammad Zahid",
+      "rollNo": "F24BDOCS1M1200",
+      "email": "f24bdocs1m01200@iub.edu.pk",
+      "password": "Zahid@303",
+      "department": "Computer Science",
+      "semester": 4,
+      "role": "student"
+    },
+    {
+      "id": "2",
+      "name": "Muhammad Azhar",
+      "rollNo": "F24BDOCS1M1213",
+      "email": "f24bdocs1m01213@iub.edu.pk",
+      "password": "Azhar27$",
       "department": "Computer Science",
       "semester": 4,
       "role": "student"
     },
     {
       "id": "3",
-      "name": "Admin",
+      "name": "Omar Ajmal",
       "rollNo": "ADMIN-001",
-      "email": "admin@iub.edu.pk",
-      "password": "admin123",
+      "password": "login54$serial",
+      "email": "helpdesk@iub.edu.pk",
       "department": "Administration",
-      "semester": null,
       "role": "admin"
     }
   ],
   "tickets": [
     {
       "userId": "1",
-      "studentName": "Ahmed Ali",
-      "rollNo": "F24BDOCS1M0001",
+      "studentName": "Muhammad Haris",
+      "rollNo": "F24BDOCS1M01259",
       "department": "Computer Science",
-      "type": "fee",
-      "subject": "sdsa",
-      "description": "sdasd",
-      "status": "rejected",
-      "id": "_9N7B8j0YNw",
-      "adminNote": "you have coppied work"
-    },
-    {
-      "userId": "1",
-      "studentName": "Ahmed Ali",
-      "rollNo": "F24BDOCS1M0001",
-      "department": "Computer Science",
-      "type": "leave",
-      "subject": "sdaad",
-      "description": "sadadadad",
-      "status": "pending",
-      "id": "0r4o3fyi1OQ"
-    },
-    {
-      "userId": "1",
-      "studentName": "Ahmed Ali",
-      "rollNo": "F24BDOCS1M0001",
-      "department": "Computer Science",
-      "type": "leave",
-      "subject": "sssssss",
-      "description": "asdadadad",
-      "status": "pending",
-      "id": "q_0s7ji1dO4"
-    },
-    {
-      "userId": "1",
-      "studentName": "Ahmed Ali",
-      "rollNo": "F24BDOCS1M0001",
-      "department": "Computer Science",
-      "type": "leave",
-      "subject": "sdfsfsfsf",
-      "description": "sklfklsfsfls",
-      "status": "pending",
-      "id": "rnqnGwa9pM4"
-    },
-    {
-      "userId": "1",
-      "studentName": "Ahmed Ali",
-      "rollNo": "F24BDOCS1M0001",
-      "department": "Computer Science",
-      "type": "transcript",
-      "subject": "jjjks",
-      "description": "dsjkaskd",
-      "status": "pending",
-      "id": "ZxEvPcaTF7c"
-    },
-    {
-      "userId": "1",
-      "studentName": "Ahmed Ali",
-      "rollNo": "F24BDOCS1M0001",
-      "department": "Computer Science",
-      "type": "fee",
-      "subject": "sdsad",
-      "description": "dfdsfdsfdsf",
-      "status": "pending",
-      "id": "FkU7VNYi1FE"
-    },
-    {
-      "userId": "1",
-      "studentName": "Ahmed Ali",
-      "rollNo": "F24BDOCS1M0001",
-      "department": "Computer Science",
-      "type": "leave",
-      "subject": "leave",
-      "description": "approval",
-      "status": "pending",
-      "id": "CeEN5kZyjoQ"
+      "semester": 4,
+      "type": "scholarship",
+      "subject": "scholarship",
+      "description": "wali",
+      "status": "resolved",
+      "id": "5FuFc76Gngs",
+      "adminNote": "you have to contact your class cr"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

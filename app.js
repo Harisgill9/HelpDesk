@@ -7,7 +7,7 @@ function loadLogin() {
             <form id="loginForm" novalidate>
                 <div class="form-group">
                     <label for="registrationNo">Registration No*</label>
-                    <input type="text" id="registrationNo" name="registrationNo" autocomplete="off" 
+                    <input type="text" id="registrationNo" name="registrationNo" autocomplete="on" 
                     placeholder="e.g. F24BDOCS1M0001"/>
                 </div>
                 <div class="form-group">
@@ -179,6 +179,10 @@ async function loadTickets(userId) {
                     <div class="ticket-card-body">
                         <p class="ticket-subject"><strong>Subject:</strong> ${ticket.subject}</p>
                         <p class="ticket-desc"><strong>Description:</strong> ${ticket.description}</p>
+                        ${ticket.adminNote ? `
+                        <p class="admin-note">
+                            <strong>Admin Response:</strong> ${ticket.adminNote}
+                        </p>` : ''}
                     </div>
                 </div>
             `;
@@ -359,6 +363,7 @@ async function handleSubmit(e) {
         studentName: user.name,
         rollNo: user.rollNo,
         department: user.department,
+        semester: user.semester,
         type: appType,
         subject: subject,
         description: description,
