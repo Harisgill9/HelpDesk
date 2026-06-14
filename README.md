@@ -79,6 +79,32 @@ Open `index.html` using Live Server in VS Code
 | Password | admin123 |
 
 ---
+
+## Screenshots
+
+### 1. Landing Page
+![Landing Page](./screenshots/landingPage.html.png)
+
+### 2. Student Login
+![Student Login](./screenshots/studentlogin.html.png)
+
+### 3. Student Dashboard
+![Student Dashboard](./screenshots/studentDashboard.html.png)
+
+### 4. Submit Application
+![Submit Application](./screenshots/submitApplication.html.png)
+
+### 5. Success Page
+![Success](./screenshots/sucessSubmit.html.png)
+
+### 6. Admin Login
+![Admin Login](./screenshots/adminlogin.html.png)
+
+### 7. Admin Dashboard
+![Admin Dashboard](./screenshots/adminDashboard.html.png)
+
+---
+
 ## Project Structure
 Semester_Project/
 

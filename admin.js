@@ -139,7 +139,7 @@ async function loadAdminTickets() {
                         <p><strong>Student:</strong> ${ticket.studentName}</p>
                         <p><strong>Roll No:</strong> ${ticket.rollNo}</p>
                         <p><strong>Department:</strong> ${ticket.department}</p>
-                        <p><strong>Semester:</strong> ${ticket.semester || 'N/A'}</p>
+                        <p><strong>Semester:</strong> ${ticket.semester}</p>
                         <p class="ticket-subject"><strong>Subject:</strong> ${ticket.subject}</p>
                         <p class="ticket-desc"><strong>Description:</strong> ${ticket.description}</p>
                     </div>

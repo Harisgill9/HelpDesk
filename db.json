@@ -21,7 +21,7 @@
       "role": "student"
     },
     {
-      "id": "2",
+      "id": "3",
       "name": "Muhammad Azhar",
       "rollNo": "F24BDOCS1M1213",
       "email": "f24bdocs1m01213@iub.edu.pk",
@@ -36,7 +36,16 @@
       "rollNo": "ADMIN-001",
       "password": "login54$serial",
       "email": "helpdesk@iub.edu.pk",
-      "department": "Administration",
+      "department": "Computer Science",
+      "role": "admin"
+    },
+    {
+      "id": "4",
+      "name": "Muhammad Ahmed",
+      "rollNo": "ADMIN-002",
+      "password": "information302$",
+      "email": "helpdesk@iub.edu.pk",
+      "department": "Hostel management",
       "role": "admin"
     }
   ],
@@ -47,12 +56,36 @@
       "rollNo": "F24BDOCS1M01259",
       "department": "Computer Science",
       "semester": 4,
+      "type": "degree",
+      "subject": "Degree collection",
+      "description": "To,\nThe Controller of Examinations,\nIslamia University of Bahawalpur\n\nSubject: Application for Degree Issuance\n\nRespected Sir/Madam,\nI am Haris, student of computer science, Semester [4], Roll No F24BDOCS1M01259. I request you to please issue my degree certificate.\n\nThank you",
+      "status": "pending",
+      "id": "vYanbT5ze2c"
+    },
+    {
+      "userId": "1",
+      "studentName": "Muhammad Haris",
+      "rollNo": "F24BDOCS1M01259",
+      "department": "Computer Science",
+      "semester": 4,
       "type": "scholarship",
-      "subject": "scholarship",
-      "description": "wali",
-      "status": "resolved",
-      "id": "5FuFc76Gngs",
-      "adminNote": "you have to contact your class cr"
+      "subject": "NEEDY SCHOLARSHIP",
+      "description": "To,\nThe Scholarship Committee,\nIslamia University of Bahawalpur\n\nSubject: Application for Scholarship\n\nRespected Sir/Madam,\nI am Haris, Roll No F24BDOCS1M01259. I request you to please consider me for the scholarship program.\n\nThank you",
+      "status": "pending",
+      "id": "e5qnWlo8W7s"
+    },
+    {
+      "userId": "1",
+      "studentName": "Muhammad Haris",
+      "rollNo": "F24BDOCS1M01259",
+      "department": "Computer Science",
+      "semester": 4,
+      "type": "leave",
+      "subject": "for attending to marriage",
+      "description": "To,\nThe Head of Department,\nIslamia University of Bahawalpur\n\nSubject: Application for Leave\n\nRespected Sir/Madam,\nI am Haris, Roll No F24BDOCS1M01259. I request you to please grant me leave from [Start Date] to [End Date] due to [Reason].\n\nThank you",
+      "status": "rejected",
+      "id": "xosI259HY5M",
+      "adminNote": "reason not mentioned"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
