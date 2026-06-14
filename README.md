@@ -1,7 +1,7 @@
 # PROJECT TITLE : IUB Online Help Desk Portal
 
 **Student Name:** Muhammad Haris  
-**Roll No:** F24BDOCS1M01259 
+**Roll No:** F24BDOCS1M01259    
 **Course:** Web Technologies  
 **Semester:** 4th  
 **Section:** 2M  
@@ -69,14 +69,26 @@ Open `index.html` using Live Server in VS Code
 ### Student Login
 | Field | Value |
 |---|---|
-| Roll No | F24BDOCS1M0001 |
-| Password | 123456 |
+| Roll No | F24BDOCS1M01259 |
+| Password | haris@203 |
+
+### Student Login
+| Field | Value |
+|---|---|
+| Roll No | F24BDOCS1M1200 |
+| Password | Zahid@303 |
 
 ### Admin Login
 | Field | Value |
 |---|---|
 | Roll No | ADMIN-001 |
-| Password | admin123 |
+| Password | login54$serial |
+
+### Admin Login
+| Field | Value |
+|---|---|
+| Roll No | ADMIN-002 |
+| Password | information302$ |
 
 ---
 
